@@ -14,7 +14,11 @@ import java.time.LocalDateTime;
 @Document(collection = "reviews")
 public class Review {
     private ObjectId id;
-    private String body;
+    private String reviewBody;
     private LocalDateTime created;
     private LocalDateTime updated;
+
+    public Review(String reviewBody) {
+        this.reviewBody = reviewBody;
+    }
 }
